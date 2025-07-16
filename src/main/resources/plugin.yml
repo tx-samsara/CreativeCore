@@ -1,0 +1,5 @@
+name: CreativeCore
+version: '1.0-SNAPSHOT'
+main: com.create.creativeCore.CreativeCore
+api-version: '1.21'
+authors: [ samsara ]
