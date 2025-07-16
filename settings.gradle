@@ -1,1 +1,13 @@
+pluginManagement {
+    repositories {
+        maven { url "https://maven.architectury.dev/" }
+        maven { url "https://files.minecraftforge.net/maven/" }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
+
+}
 rootProject.name = 'CreativeCore'
