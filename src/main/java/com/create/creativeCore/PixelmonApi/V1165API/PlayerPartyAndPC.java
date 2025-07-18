@@ -1,18 +1,15 @@
 package com.create.creativeCore.PixelmonApi.V1165API;
 
-import com.create.creativeCore.PixelmonApi.PokeVersionUtils;
-import com.pixelmonmod.pixelmon.Pixelmon;
 import com.pixelmonmod.pixelmon.api.storage.PCStorage;
-import com.pixelmonmod.pixelmon.storage.PlayerPartyStorage;
+import com.pixelmonmod.pixelmon.api.storage.PlayerPartyStorage;
+import com.pixelmonmod.pixelmon.api.storage.StorageProxy;
 import org.bukkit.entity.Player;
 
-public class PlayerPartyAndPC implements PokeVersionUtils {
-    @Override
-    public PlayerPartyStorage getParty(Player player){
-        return Pixelmon.storageManager.getParty(player.getUniqueId());
+public class PlayerPartyAndPC {
+    public static PlayerPartyStorage getParty(Player player){
+        return StorageProxy.getParty(player.getUniqueId());
     }
-    @Override
-    public PCStorage getPC(Player player){
-        return Pixelmon.storageManager.getPCForPlayer(player.getUniqueId());
+    public static PCStorage getPC(Player player){
+        return StorageProxy.getPCForPlayer(player.getUniqueId());
     }
 }
